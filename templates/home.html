@@ -60,21 +60,23 @@
   </section>
 
   <!-- Search Bar -->
-  <!-- <section class="search-bar py-2">
+  
+  <section class="search-bar py-2">
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-lg-6">
-          <form>
+          <form action="{% url 'book_search' %}" method="GET">
             <div class="input-group">
-              <input type="text" class="form-control" placeholder="Search books by title, author, department, etc."
+              <input type="text" class="form-control" name="q" placeholder="Search books by title, author, department, etc."
                 aria-label="Search" aria-describedby="search-btn">
-              <button class="btn btn-primary" type="button" id="search-btn">Search</button>
+              <button class="btn btn-primary" type="submit" id="search-btn">Search</button>
             </div>
           </form>
         </div>
       </div>
     </div>
-  </section> -->
+  </section>
+  
 
   <!-- Department-wise Sections -->
 <section class="departments py-5 bg-light">

@@ -22,7 +22,7 @@ class TeacherAdminForm(UserCreationForm):
 class BookForm(forms.ModelForm):
     def __init__(self, teacher_department_id, *args, **kwargs):
         super(BookForm, self).__init__(*args, **kwargs)
-        self.fields['department'].queryset = Department.objects.filter(id=teacher_department_id)
+        # self.fields['department'].queryset = Department.objects.filter(id=teacher_department_id)
         
     class Meta:
         model = Book

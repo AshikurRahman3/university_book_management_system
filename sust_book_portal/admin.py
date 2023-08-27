@@ -1,5 +1,5 @@
 from django.contrib import admin
-from .models import Department, Semester, Book
+from .models import Department, Semester, Book , archived_books
 
 from django.contrib import admin
 from django.contrib.auth.admin import UserAdmin
@@ -37,3 +37,4 @@ admin.site.register(Teacher)
 admin.site.register(Department)
 admin.site.register(Semester)
 admin.site.register(Book)
+admin.site.register(archived_books)

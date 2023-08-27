@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Archived Books</title>
+    <!-- Include Bootstrap CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/css/bootstrap.min.css">
+</head>
+
+    <style>
+        .footer {
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+        height: 60px; /* Height of the footer */
+        background-color: #343a40;
+      }
+  
+      .footer p {
+        line-height: 60px;
+        margin: 0;
+        color: #fff;
+      }
+    </style>
+<body>
+
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+          <a class="navbar-brand" href="{% url 'teacher_home' %}">Sust Book Portal</a>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav me-auto">
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'teacher_departments' %}">Departments</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'archived_books_list' %}">Archived books</a>
+              </li>
+            </ul>
+            <ul class="navbar-nav">
+              <li class="nav-item me-2">
+                <span class="nav-link text-light">Welcome, {{ user.first_name }} {{ user.last_name }}</span>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="{% url 'teacher_logout' %}">Logout</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+
+
+
+
+
+    <div class="container mt-4">
+        <h2>Archived Books</h2>
+        <table class="table table-bordered">
+            <thead>
+                <tr>
+                    <th>Title</th>
+                    <th>Author</th>
+                    <th>Semester</th>
+                    <th>Department</th>
+                    <th>drive link</th>
+                    <th>download</th>
+                    <th>Actions</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for book in archived_books %}
+                <tr>
+                    <td>{{ book.title }}</td>
+                    <td>{{ book.author }}</td>
+                    <td>{{ book.semester }}</td>
+                    <td>{{ book.department }}</td>
+                    <td>{% if book.link %}
+                        <a href="{{ book.link }}">Drive link</a>
+                    {% endif %}</td>
+                    <td>{% if book.file %}
+                        <a href="{{ book.file.url }}">Download File</a>
+                        {% endif %}</td>
+                    <td>
+                        <a href="{% url 'restore_book' book.pk %}" class="btn btn-primary">Restore</a>
+                    </td>
+                    
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </div>
+
+    <!-- Footer -->
+ <footer class="footer bg-dark text-light">
+    <div class="container text-center">
+      <p>&copy; 2023 Sust Book Portal. All rights reserved.</p>
+    </div>
+  </footer>
+
+    
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

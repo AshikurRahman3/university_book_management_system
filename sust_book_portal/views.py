@@ -1,5 +1,5 @@
 from django.shortcuts import render,redirect,get_object_or_404
-from .models import Department,Book,Semester,Teacher
+from .models import Department,Book,Semester,Teacher ,archived_books
 from django.contrib.auth.models import User
 from django.contrib import auth
 from django.contrib import messages
@@ -115,3 +115,49 @@ def teacher_all_departments_book_display(request,department_id):
         'books': books,
     }
     return render(request,'teacher_all_departments_book_display.html',context)
+
+
+
+
+def archived_books_list(request):
+    archived_books_queryset = archived_books.objects.all()
+    context = {'archived_books': archived_books_queryset}
+    return render(request, 'archived_books.html', context)
+
+
+
+def restore_book(request, pk):
+    archived_book = get_object_or_404(archived_books, pk=pk)
+    
+    # Create a new book based on the archived book's data
+    new_book = Book.objects.create(
+        title=archived_book.title,
+        author=archived_book.author,
+        semester=archived_book.semester,
+        department=archived_book.department,
+        cover_image=archived_book.cover_image,
+        link=archived_book.link,
+        file=archived_book.file
+    )
+    
+    archived_book.delete()  # Delete the archived book
+    
+    return redirect('archived_books_list')
+
+
+
+def book_search(request):
+    query = request.GET.get('q')
+
+    if query:
+        books = Book.objects.filter(
+            Q(title__icontains=query) |
+            Q(author__icontains=query) |
+            Q(department__name__icontains=query)
+        )
+    else:
+        books = Book.objects.all()
+
+    context = {'books': books, 'query': query}
+    return render(request, 'book_search_results.html', context)
+

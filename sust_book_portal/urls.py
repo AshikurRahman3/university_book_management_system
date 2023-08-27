@@ -12,4 +12,7 @@ urlpatterns = [
     path('add_book/', views.add_book, name='add_book'),
     path('teacher_departments', views.teacher_departments, name='teacher_departments'),
     path('departments/<int:department_id>/teacher_all_departments_book_display/', views.teacher_all_departments_book_display, name='teacher_all_departments_book_display'),
+       path('archived_books/', views.archived_books_list, name='archived_books_list'),
+    path('restore_book/<int:pk>/', views.restore_book, name='restore_book'),
+    path('book_search/', views.book_search, name='book_search'),
 ]
