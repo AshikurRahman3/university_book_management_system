@@ -8,7 +8,7 @@ Follow these steps to set up and run the project on your local machine:
 
 ### Prerequisites
 
-- Python
+- Python 3.11
 - MySQL
 - Visual Studio Code (or any code editor of your choice)
 
@@ -23,7 +23,11 @@ Follow these steps to set up and run the project on your local machine:
 4. Open a new terminal in VS Code.
 
 5. If the terminal says that scripts are disabled, set the execution policy to "RemoteSigned" in Windows PowerShell as an administrator.
-6. if (venv) dosent see in terminal, make sure to install python 3.11 .  then activate venv by "venv\Scripts\activate"
+6. if (venv) dosent see in terminal, make sure to install python 3.11 .  then activate venv by
+
+ ```bash
+ venv\Scripts\activate
+ ```
 
 ### Database Setup
 
