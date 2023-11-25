@@ -46,7 +46,7 @@ The website will be accessible at http://localhost:8000.
 
 
 ### import sample database
-in mysql workbench, click on "server", then click on "data import". select "import from self-contained file". then selection location as this projects "mysql backup" folders .sql file. then you will get sample admin, sample teacher, sample books etc.
+in mysql workbench, click on **server**, then click on **data import**. select **import from self-contained file**. then selection location as this projects **mysql backup** folders **.sql** file. then you will get sample admin, sample teacher, sample books etc.
 
 **sample admin:**
 
