@@ -1,6 +1,6 @@
 # University Book Management System
 
-Welcome to the University Book Management System, a Django-based project developed for the Database System Lab course at SUST's CSE department.
+Welcome  to the University Book Management System, a Django-based project developed for the Database System Lab course at SUST's CSE department.
 
 ## Getting Started
 
@@ -43,6 +43,21 @@ python manage.py migrate
 python manage.py runserver
 ```
 The website will be accessible at http://localhost:8000.
+
+
+### import sample database
+in mysql workbench, click on "server", then click on "data import". select "import from self-contained file". then selection location as this projects "mysql backup" folders .sql file. then you will get sample admin, sample teacher, sample books etc.
+
+**sample admin:**
+
+username: admin <br>
+password: password
+
+
+**sample teacher:**
+
+username: ayesha <br>
+password: ayesha_tasnim123
 
 ### Admin Access
 To access the admin panel, create a superuser with the following command:
