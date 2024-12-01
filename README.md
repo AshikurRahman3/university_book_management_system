@@ -1,6 +1,54 @@
-# University Book Management System
+# University Book Management System (SUST Book Portal)
 
-Welcome  to the University Book Management System, a Django-based project developed for the Database System Lab course at SUST's CSE department.
+**University Book Management System** (SUST Book Portal) is a Django-based web application designed to manage and archive books for university departments. The system allows teachers to log in and manage semester-wise book records, including adding and modifying books for each department. It uses MySQL as the database.
+
+
+## Table of Contents
+
+1. [Features](#features)  
+2. [Screenshots](#screenshots)  
+3. [Technologies Used](#technologies-used)
+4. [Installation](#installation)  
+
+## Features
+
+- **Semester-wise book listing**: Displays books for each semester of a department.
+- **Teacher login**: Teachers can log in and add or modify books.
+- **Database**: MySQL is used as the backend database to store and manage book data.
+- **Image support**: Teachers can upload book cover images.
+
+---
+
+## **Screenshots**
+
+
+| Home Screen | Department books | Teacher Home page |
+|-------------|-----------------|----------------------------|
+| ![Home Screen](images/home.png) | ![Department books](images/department.png) | ![Teacher Home page](images/teacher_home.png) |
+| Teacher Add books | Teacher Login | Admin Home page |
+| ![Teacher Add books](images/add_book.png) | ![Teacher Login](images/teacher_login.png) | ![Admin Home page](images/admin_home.png) |
+
+---
+
+
+## Technologies Used
+
+- **Frontend**: HTML, CSS, JavaScript
+- **Backend**: Python, Django
+- **Database**: MySQL
+- **Authentication**: Django's built-in authentication system
+- **Image Handling**: Pillow (for book cover images)
+
+## Installation
+
+### 1. Clone the Repository
+
+```bash
+git clone https://github.com/AshikurRahman3/university_book_management_system.git
+
+```
+
+
 
 ## Getting Started
 
@@ -83,3 +131,10 @@ To create a teacher, follow these steps:
 ### Creating semesters, departments, books 
 
 similar like creating teacher from admin page.
+
+
+
+## **Developer**
+
+Developed by [Ashikur Rahman](https://github.com/AshikurRahman3).  
+Feel free to explore my other projects on GitHub!
