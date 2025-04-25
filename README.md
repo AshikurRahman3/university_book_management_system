@@ -13,7 +13,7 @@
 
 
 ##  Demo Video
-[![Demo Preview](./images/university_book_management_system_main_medium.gif)](./images/university_book_management_system_main.mp4)  
+[![Demo Preview](./images/university_book_management_system_main_medium.gif)](./images/university_book_management_system_main_large.gif)  
 *Click on the image to view it in a larger size.*
 
 ## Features
