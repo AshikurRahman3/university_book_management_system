@@ -5,10 +5,16 @@
 
 ## Table of Contents
 
-1. [Features](#features)  
-2. [Screenshots](#screenshots)  
-3. [Technologies Used](#technologies-used)
-4. [Installation](#installation)  
+1. [Demo Video](#demo-video)  
+2. [Features](#features)  
+3. [Screenshots](#screenshots)  
+4. [Technologies Used](#technologies-used)
+5. [Installation](#installation)  
+
+
+##  Demo Video
+[![Demo Preview](./images/university_book_management_system_main_medium.gif)](./images/university_book_management_system_main.mp4)  
+*Click on the image to view it in a larger size.*
 
 ## Features
 
